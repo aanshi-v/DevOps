@@ -8,9 +8,11 @@ jobs:
   strategy:
     fail-fast: false
     matrix:
-     os:
-      - ubuntu-latest
-      - windows-latest
+     include:
+      - index: 0
+        os: ubuntu-latest
+      - index: 1
+        os: windows-latest
      java: [17, 21]
   steps: 
     - name: Setup Java JDK
