@@ -16,6 +16,7 @@ jobs:
   
 
   test:
+    needs: build
     runs-on: windows-latest
     steps:
       - name: Print test - chrome
@@ -24,6 +25,7 @@ jobs:
         run: echo 'test edge'
 
   deploy:
+    needs: [build, test]
     runs-on: ubuntu-latest
     steps:
       - name: Print deploy
