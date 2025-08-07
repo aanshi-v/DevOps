@@ -1,8 +1,9 @@
 name: First workflow
 
 on: 
-  schedule:
-    - cron: '* * * * *'
+  push:
+    tags:
+      - 'v*'
 
 jobs: 
   build:
