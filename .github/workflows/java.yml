@@ -12,6 +12,6 @@ jobs:
         java-version: '21'
         distribution: microsoft
     - name: Print Java Version
-      run: echo java --version
+      run: java -version
       
     
