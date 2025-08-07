@@ -15,7 +15,7 @@ jobs:
       echo 'Workflow name ${{github.workflow}}'
       echo 'Actor ${{github.actor}}'
       echo 'ref details ${{github.ref}}'
-      echo 'trigger event ${{github.event}}'
+      echo 'trigger event ${{github.event_name}}'
       echo 'Run id ${{github.run_id}}'
       echo 'Runner number is ${{github.run_number}}'
    
