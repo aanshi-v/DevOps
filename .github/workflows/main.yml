@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
        - name: Print build
-         run: exit 1 
+         run: echo 'build' 
 
   test:
     needs: build
