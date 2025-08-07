@@ -18,5 +18,10 @@ jobs:
       echo 'trigger event ${{github.event_name}}'
       echo 'Run id ${{github.run_id}}'
       echo 'Runner number is ${{github.run_number}}'
+   - name: Examples
+     if: github.ref == 'refs/heads/master'
+     run: echo 'deploy'
+   - if: github.event_name == 'pull_request'
+     run: echo 'trigger the workflow'
    
  
